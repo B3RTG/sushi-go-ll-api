@@ -1,0 +1,18 @@
+post http://localhost:3001/api/classes 
+content-type: application/json
+
+{
+    "ClassName": "NUEVA CLASE",
+    "MaxStudents": 10,
+    "StartDate": "01/09/2021T09:00:00.000Z",
+    "EndDate": "01/09/2021T11:00:00.000Z",
+    "TeacherId": 1
+}
+
+###
+post http://localhost:3001/api/classes 
+content-type: application/json
+
+{
+
+}
