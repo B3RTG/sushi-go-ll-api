@@ -1,11 +1,10 @@
-// const { response, request } = require('express');
 const express = require('express')
-// import http from 'http';
+
 const app = express()
 const logger = require('./middleware/logger')
 const cors = require('cors')
 
-app.use(cors) // Allow other origins
+app.use(cors()) // Allow other origins
 app.use(express.json())
 app.use(logger)
 
@@ -43,7 +42,9 @@ const teachers = [
     Name: 'Lorenzo'
   }
 ]
-
+app.get('/', (request, response) => {
+  response.send('<h1>Hellow world</h1>')
+})
 app.get('/api/classes', (request, response) => {
   response.json(classes)
 })
